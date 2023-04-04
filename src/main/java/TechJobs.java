@@ -131,7 +131,7 @@ public class TechJobs {
 //        System.out.println("printJobs is not implemented yet");
         }
         else {
-            System.out.print("No Results.");
+            System.out.print("No Results");
         }
     }
 }
