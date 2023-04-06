@@ -40,32 +40,32 @@ public class TechJobsTest {
     @Test
     public void testPrintJobs() throws IOException {
         String input = "0\n2\nBuzzbold\nx";
-        String output = runProgramWithInput(input);
-        String expected = getFileContents("src/test/resources/testPrintJobs.txt");
+        String output = runProgramWithInput(input).replaceAll("\r", ""); ///*****
+        String expected = getFileContents("src/test/resources/testPrintJobs.txt").replaceAll("\r", ""); ///****
         assertEquals(expected, output);
     }
 
     @Test
     public void testPrintJobsNoResults() throws IOException {
         String input = "0\n2\nChicago\nx";
-        String output = runProgramWithInput(input);
-        String expected = getFileContents("src/test/resources/testPrintJobsNoResults.txt");
+        String output = runProgramWithInput(input).replaceAll("\r", ""); ///*****;
+        String expected = getFileContents("src/test/resources/testPrintJobsNoResults.txt").replaceAll("\r", ""); ///*****;
         assertEquals(expected, output);
     }
 
     @Test
     public void testFindByValue() throws IOException {
         String input = "0\n0\nRuby\nx";
-        String output = runProgramWithInput(input);
-        String expected = getFileContents("src/test/resources/testFindByValue.txt");
+        String output = runProgramWithInput(input).replaceAll("\r", ""); ///*****;
+        String expected = getFileContents("src/test/resources/testFindByValue.txt").replaceAll("\r", ""); ///*****;
         assertEquals(expected, output);
     }
 
     @Test
     public void testCaseInsensitiveSearch() throws IOException {
         String input = "0\n3\nnew YORk\nx";
-        String output = runProgramWithInput(input);
-        String expected = getFileContents("src/test/resources/testCaseInsensitiveSearch.txt");
+        String output = runProgramWithInput(input).replaceAll("\r", ""); ///*****;
+        String expected = getFileContents("src/test/resources/testCaseInsensitiveSearch.txt").replaceAll("\r", ""); ///*****;
         assertEquals(expected, output);
     }
 
